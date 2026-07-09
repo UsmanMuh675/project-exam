@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp · Project Brief</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="weather-app" id="app">
+
+    <!-- HEADER -->
+    <header class="app-header">
+        <div class="app-title">
+            ☀️ Weather <span>APP</span>
+        </div>
+
+        <form class="search-form" id="searchForm">
+            <input type="text" id="cityInput" placeholder="Search city..." value="Lagos">
+            <button type="submit" id="searchBtn">Search</button>
+        </form>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-section" id="heroSection">
+        <div id="heroContent">
+            <div class="hero-city" id="cityName">Lagos</div>
+            <div class="hero-country" id="countryName">Nigeria</div>
+            <div class="hero-temp" id="temperature">32°C</div>
+
+            <div class="hero-desc" id="weatherDesc">
+                <span class="icon-big" id="weatherIcon">☀️</span>
+                <span id="descText">Sunny · Feels like 16°C</span>
+            </div>
+        </div>
+
+        <div id="loadingPlaceholder" class="hidden loading-text">
+            ⏳ Loading...
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-row">
+        <div class="stat-item">
+            <div class="stat-label">💧 Humidity</div>
+            <div class="stat-value" id="humidityVal">70%</div>
+        </div>
+
+        <div class="stat-item">
+            <div class="stat-label">🌬️ Wind</div>
+            <div class="stat-value" id="windVal">14 km/h</div>
+        </div>
+
+        <div class="stat-item">
+            <div class="stat-label">☀️ UV Index</div>
+            <div class="stat-value" id="uvVal">High</div>
+        </div>
+    </div>
+
+    <!-- FORECAST -->
+    <section class="forecast-section">
+        <div class="forecast-title">📅 5 DAY FORECAST</div>
+
+        <div class="forecast-grid" id="forecastGrid">
+            <div class="forecast-row">
+                <span class="forecast-day">Today</span>
+                <span class="forecast-icon">☀️</span>
+                <span class="forecast-temps">
+                    <span class="high">31°</span>
+                    <span class="low">14°</span>
+                </span>
+            </div>
+
+            <div class="forecast-row">
+                <span class="forecast-day">Tue</span>
+                <span class="forecast-icon">⛅</span>
+                <span class="forecast-temps">
+                    <span class="high">29°</span>
+                    <span class="low">13°</span>
+                </span>
+            </div>
+
+            <div class="forecast-row">
+                <span class="forecast-day">Wed</span>
+                <span class="forecast-icon">🌧️</span>
+                <span class="forecast-temps">
+                    <span class="high">27°</span>
+                    <span class="low">12°</span>
+                </span>
+            </div>
+
+            <div class="forecast-row">
+                <span class="forecast-day">Thu</span>
+                <span class="forecast-icon">☁️</span>
+                <span class="forecast-temps">
+                    <span class="high">28°</span>
+                    <span class="low">13°</span>
+                </span>
+            </div>
+
+            <div class="forecast-row">
+                <span class="forecast-day">Fri</span>
+                <span class="forecast-icon">🌤️</span>
+                <span class="forecast-temps">
+                    <span class="high">30°</span>
+                    <span class="low">15°</span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ERROR -->
+    <div class="error-area hidden" id="errorArea">
+        ⚠️ City not found. Please try again.
+    </div>
+
+</div>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
